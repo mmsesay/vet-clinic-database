@@ -30,21 +30,21 @@ This repository includes files with plain SQL that can be used to recreate a dat
 > Note: the lesser than and greater signs in bullet point 3 & 4 should not be part of your database name. They are present there to illustrate where you should include your desired name.
 Using ![POSTGRESQL](https://www.postgresql.org/) for test case.
 
-- Downloand and install postgresql based on your OS:
- - [Windows](https://www.postgresql.org/download/windows/)
- - [MacOS](https://www.postgresql.org/download/macosx/)
- - Linux:
-   - [Debian](https://www.postgresql.org/download/linux/debian/)
-   - [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/)
-   - [Others](https://www.postgresql.org/download/linux/#generic)
+1. Downloand and install postgresql based on your OS:
+    - [Windows](https://www.postgresql.org/download/windows/)
+    - [MacOS](https://www.postgresql.org/download/macosx/)
+    - Linux:
+        - [Debian](https://www.postgresql.org/download/linux/debian/)
+        - [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/)
+        - [Others](https://www.postgresql.org/download/linux/#generic)
 
-- Switch over to the postgres Account ```sudo su - postgres```. Please enter your system's password if requested for.
-- Access postgres: ```psql```
-- Create database: ```CREATE DATABASE <please_replace_with_your_database_name>;```
-- Connect to the database: ```\c <please_replace_with_your_database_name>;```
-- Copy the table structure from **schema.sql** file and run it.
-- Follow the snippets from **data.sql** to insert data into the table.
-- Try out the snippets from the **queries.sql** to query your table.
+2. Switch over to the postgres Account ```sudo su - postgres```. Please enter your system's password if requested for.
+3. Access postgres: ```psql```
+4. Create database: ```CREATE DATABASE <please_replace_with_your_database_name>;```
+5. Connect to the database: ```\c <please_replace_with_your_database_name>;```
+6. Copy the table structure from **schema.sql** file and run it.
+7. Follow the snippets from **data.sql** to insert data into the table.
+8. Try out the snippets from the **queries.sql** to query your table.
 
 ## Built With
 
