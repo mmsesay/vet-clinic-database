@@ -27,7 +27,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 ## How to test it locally?
 
 > Please skip the installation steps if you already have a relational database running on your system.
-> Note: the lesser than and greater signs in bullet point 3 & 4 should not be part of your database name. They are present there to illustrate where you should include your desired name.
+> Note: the lesser than and greater signs in points 4 & 5 should not be part of your database name. They are present there to illustrate where you should include your desired name.
 Using ![POSTGRESQL](https://www.postgresql.org/) for test case.
 
 1. Downloand and install postgresql based on your OS:
