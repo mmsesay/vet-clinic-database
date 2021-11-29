@@ -1,8 +1,20 @@
-# curriculum-databases-projects-template
+# vet-clinic-database
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> This project you uses a relational database to create the initial data structure for a vet clinic. It holds a table to store animals' information, insert some data into it, and query it.
 
+## Screenshots of the database results
+
+List of all animals                | Animals with names "mon"     |  Born between 2016/2019                          |
+:---------------------------------:|:----------------------------:|:------------------------------------------------:|
+![](./screenshots/tb1.png)         | ![](./screenshots/tb2.png)   | ![](./screenshots/tb3.png)                       |
+
+Neutured and 0-3 escaped attempt   | DOB of "Agumon" or "Pikachu" | Animals that weigh more than 10.5kg              |
+:---------------------------------:|:----------------------------:|:------------------------------------------------:|
+![](./screenshots/tb4.png)         |![](./screenshots/tb5.png)    | ![](./screenshots/tb6.png)                       |
+
+All neutered animals               | Animals not named Gabumon    |Animals with a weight between 10.4kg and 17.3kg   |
+:---------------------------------:|:----------------------------:|:------------------------------------------------:|
+![](./screenshots/tb7.png)         | ![](./screenshots/tb8.png)   | ![](./screenshots/tb9.png)                       | 
 
 ## Getting Started
 
@@ -12,20 +24,17 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Use [data.sql](./data.sql) to populate tables with sample data.
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
+## Built With
 
-## Authors
+- POSTGRESQL
 
-👤 **Author1**
+## Author
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Muhammad Mustapha Sesay**
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@mmsesay](https://github.com/mmsesay)
+- Twitter: [@DeeMaejor](https://twitter.com/DeeMaejor)
+- LinkedIn: [Muhammad M Sesay](https://linkedin.com/in/muhammad-m-sesay)
 
 ## 🤝 Contributing
 
