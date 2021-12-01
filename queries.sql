@@ -81,3 +81,12 @@ SELECT * FROM animals
    LEFT JOIN species
 ON animals.species_id = species.id
    WHERE species.name = 'Pokemon';
+
+-- All owners and their animals
+SELECT
+   full_name as owner_name,
+   name as animal_name
+FROM owners
+   LEFT JOIN animals
+ON owners.id = animals.owner_id;
+
