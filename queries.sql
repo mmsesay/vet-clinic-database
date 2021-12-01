@@ -19,3 +19,14 @@ UPDATE animals SET species = 'unspecified';
 SELECT species FROM animals; -- verify the change
 ROLLBACK;
 SELECT species FROM animals; -- verify the changes are reverted
+
+-- Transaction to update animals based on species
+BEGIN;
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon'; 
+UPDATE animals SET species = 'pokemon' WHERE species IS NULL; 
+
+SELECT species from animals; -- verify that change
+COMMIT;
+SELECT species from animals; -- verify that change was saved
+END;
+
