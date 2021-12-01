@@ -60,3 +60,7 @@ SELECT AVG(weight_kg) FROM animals;
 -- Most escape attempt average
 SELECT neutered, AVG(escape_attempt) FROM animals
 GROUP BY neutered;
+
+-- Minimum and maximum weight of each type of animal
+SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals
+GROUP BY species;
