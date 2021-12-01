@@ -56,3 +56,7 @@ SELECT COUNT(*) FROM animals WHERE escape_attempt = 0;
 
 -- Avergae weight in kg of all animals
 SELECT AVG(weight_kg) FROM animals;
+
+-- Most escape attempt average
+SELECT neutered, AVG(escape_attempt) FROM animals
+GROUP BY neutered;
