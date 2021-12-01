@@ -70,3 +70,11 @@ VALUES ('Jodie Whittaker', 38);
 
 INSERT INTO species (name) VALUES ('Pokemon');
 INSERT INTO species (name) VALUES ('Digimon');
+
+UPDATE animals
+SET species_id = (SELECT id from species WHERE name = 'Digimon')
+WHERE name like '%mon';
+
+UPDATE animals
+SET species_id = (SELECT id from species WHERE name = 'Pokemon')
+WHERE species_id IS NULL;
