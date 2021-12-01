@@ -25,15 +25,26 @@ BEGIN;
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon'; 
 UPDATE animals SET species = 'pokemon' WHERE species IS NULL; 
 
-SELECT species from animals; -- verify that change
+SELECT species from animals; -- verify the change
 COMMIT;
-SELECT species from animals; -- verify that change was saved
+SELECT species from animals; -- verify the change was saved
 END;
 
 -- Transaction to delete all animals;
 BEGIN;
 DELETE FROM animals;
-SELECT * FROM animals; -- verify that change
-
+SELECT * FROM animals; -- verify the change
 ROLLBACK;
-SELECT * FROM animals; -- verify that change
+SELECT * FROM animals; -- verify the change
+
+-- Transaction to delete all animals born after JAN-01-2022;
+BEGIN;
+DELETE FROM animals WHERE  date_of_birth >= '2022-01-01';
+SAVEPOINT SP_DELETE_ANIMALS;
+
+UPDATE animals SET weight_kg = weight_kg * -1;
+SELECT weight_kg FROM animals; -- verify that change
+ROLLBACK TO SP_DELETE_ANIMALS;
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0; 
+
+COMMIT;
