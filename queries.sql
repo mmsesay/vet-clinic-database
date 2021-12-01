@@ -30,3 +30,10 @@ COMMIT;
 SELECT species from animals; -- verify that change was saved
 END;
 
+-- Transaction to delete all animals;
+BEGIN;
+DELETE FROM animals;
+SELECT * FROM animals; -- verify that change
+
+ROLLBACK;
+SELECT * FROM animals; -- verify that change
