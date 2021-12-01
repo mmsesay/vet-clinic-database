@@ -90,3 +90,8 @@ FROM owners
    LEFT JOIN animals
 ON owners.id = animals.owner_id;
 
+-- Animals count per species
+SELECT species.name, COUNT(*) FROM animals
+   LEFT JOIN species
+ON animals.species_id = species.id
+GROUP BY species.name
