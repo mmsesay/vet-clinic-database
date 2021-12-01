@@ -46,5 +46,7 @@ UPDATE animals SET weight_kg = weight_kg * -1;
 SELECT weight_kg FROM animals; -- verify that change
 ROLLBACK TO SP_DELETE_ANIMALS;
 UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0; 
-
 COMMIT;
+
+-- Count all animals
+SELECT COUNT(*) FROM animals;
