@@ -50,3 +50,6 @@ COMMIT;
 
 -- Count all animals
 SELECT COUNT(*) FROM animals;
+
+-- Count all animals that have never tried to escaped
+SELECT COUNT(*) FROM animals WHERE escape_attempt = 0;
