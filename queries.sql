@@ -161,3 +161,10 @@ WHERE vets.name = 'Maisy Smith'
 ORDER BY visits.date_of_visit ASC
 LIMIT 1;
 
+-- Animals with the most vist
+SELECT animals.name, count(animals.name) FROM visits
+	JOIN animals 
+ON animals.id = visits.animal_id
+GROUP BY (animals.name)
+ORDER BY count(animals.name) DESC
+
