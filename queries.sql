@@ -117,6 +117,7 @@ ON animals.owner_id = owners.id
 GROUP BY owners.full_name
 ORDER BY COUNT(owners.full_name) DESC;
 
+-- Animals who visits William Tatcher
 SELECT animals.name, visits.date_of_visit FROM visits
    JOIN animals 
 ON animals.id = visits.animal_id
@@ -126,6 +127,7 @@ WHERE vets.name = 'William Tatcher'
 ORDER BY visits.date_of_visit DESC
 LIMIT 1;
 
+-- Animals who visits Stephanie Mendez
 SELECT DISTINCT animals.name FROM visits
    JOIN animals 
 ON animals.id = visits.animal_id
@@ -133,6 +135,7 @@ ON animals.id = visits.animal_id
 ON vets.id = visits.vet_id
 WHERE vets.name = 'Stephanie Mendez';
 
+-- List of vets and their specialities
 SELECT 
 	vets.name as vet_name, species.name as specialities FROM vets
 	JOIN specializations 
@@ -140,10 +143,21 @@ ON vets.id = specializations.vet_id OR vets.id != specializations.vet_id
 	JOIN species 
 ON specializations.species_id = species.id;
 
+-- Animals who visit Stephanie Mendez between April 1st and August 30th, 2020.
 SELECT animals.name, visits.date_of_visit FROM visits
    JOIN animals 
 ON animals.id = visits.animal_id
    JOIN vets 
 ON vets.id = visits.vet_id
 WHERE vets.name = 'Stephanie Mendez' AND date_of_visit > '2020-04-01' AND date_of_visit < '2020-08-30'
+
+-- Animal who visits Maisy Smith's first visit
+SELECT animals.name, visits.date_of_visit FROM visits
+	JOIN animals 
+ON animals.id = visits.animal_id
+	JOIN vets 
+ON vets.id = visits.vet_id
+WHERE vets.name = 'Maisy Smith'
+ORDER BY visits.date_of_visit ASC
+LIMIT 1;
 
