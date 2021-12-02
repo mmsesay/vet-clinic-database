@@ -125,3 +125,11 @@ ON vets.id = visits.vet_id
 WHERE vets.name = 'William Tatcher'
 ORDER BY visits.date_of_visit DESC
 LIMIT 1;
+
+SELECT DISTINCT animals.name FROM visits
+   JOIN animals 
+ON animals.id = visits.animal_id
+   JOIN vets 
+ON vets.id = visits.vet_id
+WHERE vets.name = 'Stephanie Mendez';
+
