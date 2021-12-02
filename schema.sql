@@ -33,6 +33,12 @@ CREATE TABLE specializations (
 	vet_id integer
 );
 
+CREATE TABLE visits (
+	animal_id integer,
+	vet_id integer,
+	date_of_visit date
+);
+
 -- Remove column species
 ALTER TABLE animals DROP COLUMN species;
 
