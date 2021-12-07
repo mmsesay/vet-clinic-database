@@ -46,3 +46,6 @@ ALTER TABLE animals DROP COLUMN species;
 ALTER TABLE animals ADD species_id int REFERENCES species(id);
 ALTER TABLE animals ADD owner_id int REFERENCES owners(id);
 
+-- Add a new column for performance audit
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+

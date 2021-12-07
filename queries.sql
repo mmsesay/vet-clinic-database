@@ -196,3 +196,4 @@ ON vets.id = visits.vet_id
 WHERE vets.name = 'Maisy Smith'
 GROUP BY species.name;
 
+
