@@ -48,3 +48,7 @@ CREATE TABLE medical_histories_and_treatments(
     medical_history_id int REFERENCES medical_histories(id),
     treatment_id int REFERENCES treatments(id),
 );
+
+-- FK indexes
+CREATE INDEX ON medical_histories_and_treatments (medical_history_id);
+CREATE INDEX ON medical_histories_and_treatments (treatment_id);
