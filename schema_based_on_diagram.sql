@@ -42,3 +42,9 @@ ALTER TABLE
     invoices ADD CONSTRAINT invoices_medical_history_id_foreign FOREIGN KEY(medical_history_id) REFERENCES medical_histories(id);
 ALTER TABLE
     invoice_items ADD CONSTRAINT invoice_items_treatment_id_foreign FOREIGN KEY(treatment_id) REFERENCES treatments(id);
+
+-- join tables from many-to-many relationship
+CREATE TABLE medical_histories_and_treatments(
+    medical_history_id int REFERENCES medical_histories(id),
+    treatment_id int REFERENCES treatments(id),
+);
